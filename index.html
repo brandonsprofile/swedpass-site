@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swedpass — Pass the Swedish citizenship test, in English</title>
-<meta name="description" content="Free study app for the Swedish Knowledge of Society citizenship test (kunskapsprov i samhällskunskap). Full 60-question exam simulation and practice — entirely in English. Offline, no account, no ads.">
+<title>Swedpass: Pass the Swedish citizenship test in English</title>
+<meta name="description" content="Free study app for the Swedish Knowledge of Society citizenship test (kunskapsprov i samhällskunskap). Full 60-question exam simulation and practice, entirely in English. Offline, no account, no ads.">
 
 <!-- Open Graph / social -->
-<meta property="og:title" content="Swedpass — Pass the Swedish citizenship test, in English">
+<meta property="og:title" content="Swedpass: Pass the Swedish citizenship test in English">
 <meta property="og:description" content="Free study app for the Swedish citizenship knowledge test. Full exam simulation and practice, entirely in English. Offline, no account.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://swedpass.com/">
@@ -19,6 +19,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Geist -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -38,7 +43,7 @@
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font: 17px/1.6 "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: var(--ink);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
@@ -87,18 +92,13 @@
   .hero-phone { justify-self: center; }
   .hero-phone img { width: 100%; max-width: 340px; height: auto; display: block; }
 
-  /* App Store badge */
+  /* App Store badge (official Apple asset) */
   .badge {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: #000; color: #fff; text-decoration: none;
-    padding: 12px 20px; border-radius: 14px;
+    display: inline-block; text-decoration: none; line-height: 0;
     transition: transform .15s ease;
   }
   .badge:hover { transform: translateY(-2px); }
-  .badge svg { width: 26px; height: 26px; flex: none; }
-  .badge .b-small { font-size: 12px; line-height: 1; opacity: .9; }
-  .badge .b-big { font-size: 21px; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
-  .badge-note { display: block; margin-top: 14px; font-size: 14px; color: var(--muted); }
+  .badge img { height: 53px; width: auto; display: block; }
 
   /* ---- Problem strip ---- */
   .strip { padding: 40px 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
@@ -130,6 +130,14 @@
   .trust h2 { font-size: 28px; font-weight: 700; margin: 0 0 28px; letter-spacing: -0.01em; }
   .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .trust-item { font-size: 16px; }
+  .trust-icon {
+    width: 48px; height: 48px; margin: 0 auto 14px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--blue) 10%, transparent);
+    color: var(--blue);
+  }
+  .trust-icon svg { width: 24px; height: 24px; }
   .trust-item .ti-top { font-weight: 600; }
   .trust-item .ti-sub { color: var(--muted); font-size: 14px; }
 
@@ -166,7 +174,7 @@
 <header>
   <div class="wrap header-inner">
     <img class="logo" src="assets/logo-black.png" alt="Swedpass">
-    <a class="nav-cta" href="https://apps.apple.com/app/id6785233680">Get the app</a>
+    <a class="nav-cta" href="https://apps.apple.com/app/id6785233680">Download App</a>
   </div>
 </header>
 
@@ -175,16 +183,11 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow">For the kunskapsprov i samhällskunskap</span>
-      <h1>Pass the Swedish citizenship test — in English.</h1>
-      <p class="lede">Study the full Knowledge of Society exam the way you actually think. Practice, simulate the real test, and learn every topic — entirely in English.</p>
+      <h1>Pass the Swedish citizenship test, in English.</h1>
+      <p class="lede">Study the full Knowledge of Society exam the way you actually think. Practice, simulate the real test, and learn every topic, entirely in English.</p>
       <a class="badge" id="get" href="https://apps.apple.com/app/id6785233680" aria-label="Download Swedpass on the App Store">
-        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        <span>
-          <span class="b-small">Download on the</span><br>
-          <span class="b-big">App Store</span>
-        </span>
+        <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="160" height="53">
       </a>
-      <span class="badge-note">Free · iPhone · iOS 17+</span>
     </div>
     <div class="hero-phone">
       <img src="assets/shot-home.png" alt="Swedpass home screen showing course topics and exam practice">
@@ -206,7 +209,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Everything you need to walk in ready.</h2>
-      <p>The official test is in Swedish and gives you nothing to practice on. Swedpass gives you the whole thing — in a language you can study in.</p>
+      <p>The official test is in Swedish and gives you nothing to practice on. Swedpass gives you the whole thing, in a language you can study in.</p>
     </div>
 
     <!-- Feature 1: Exam simulation -->
@@ -214,7 +217,7 @@
       <div class="feature-copy">
         <span class="feature-tag">Exam simulation</span>
         <h3>Sit the real test before the real test.</h3>
-        <p>A full 60-question, 90-minute run under exam conditions — no hints, timed, scored by topic. See exactly where you stand and pass with no surprises on the day.</p>
+        <p>A full 60-question, 90-minute run under exam conditions: no hints, timed, scored by topic. See exactly where you stand and pass with no surprises on the day.</p>
       </div>
       <div class="feature-shot"><img src="assets/shot-result.png" alt="Exam result screen showing 60 out of 60 with a per-topic breakdown"></div>
     </div>
@@ -224,7 +227,7 @@
       <div class="feature-copy">
         <span class="feature-tag">Practice mode</span>
         <h3>Learn as you go, not just at the end.</h3>
-        <p>Instant right-or-wrong feedback with a plain-English explanation after every question. Answers you'll actually remember — because you understood them, not memorised them.</p>
+        <p>Instant right-or-wrong feedback with a plain-English explanation after every question. Answers you'll actually remember, because you understood them, not memorised them.</p>
       </div>
       <div class="feature-shot"><img src="assets/shot-question.png" alt="Practice question with the correct answer highlighted and an explanation"></div>
     </div>
@@ -234,7 +237,7 @@
       <div class="feature-copy">
         <span class="feature-tag">Ten topics</span>
         <h3>Every area of the syllabus, one tap away.</h3>
-        <p>Democracy, the constitution, human rights, welfare, work, the economy and more — mapped directly to the official UHR syllabus. Read the essentials, then quiz yourself on the spot.</p>
+        <p>Democracy, the constitution, human rights, welfare, work, the economy and more, mapped directly to the official UHR syllabus. Read the essentials, then quiz yourself on the spot.</p>
       </div>
       <div class="feature-shot"><img src="assets/shot-quizzes.png" alt="Quick quizzes grid showing the ten citizenship test topics"></div>
     </div>
@@ -245,12 +248,24 @@
 <section class="block" style="padding-top:0;">
   <div class="wrap">
     <div class="trust">
-      <h2>Built for a high-stakes test — and nothing else.</h2>
+      <h2>Built for a high-stakes test, and nothing else.</h2>
       <div class="trust-grid">
-        <div class="trust-item"><div class="ti-top">Free</div><div class="ti-sub">No ads, ever</div></div>
-        <div class="trust-item"><div class="ti-top">No account</div><div class="ti-sub">Nothing to sign up for</div></div>
-        <div class="trust-item"><div class="ti-top">Fully offline</div><div class="ti-sub">Study anywhere</div></div>
-        <div class="trust-item"><div class="ti-top">No tracking</div><div class="ti-sub">Your data stays yours</div></div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8"/></svg></div>
+          <div class="ti-top">Free</div><div class="ti-sub">No ads, ever</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="8" x2="22" y2="13"/><line x1="22" y1="8" x2="17" y2="13"/></svg></div>
+          <div class="ti-top">No account</div><div class="ti-sub">Nothing to sign up for</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="22"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.17-2.65"/><path d="M10.66 5c4.01-.36 8.14.9 11.34 3.76"/><path d="M16.85 11.25a10 10 0 0 1 2.22 1.68"/><path d="M5 13a10 10 0 0 1 5.24-2.76"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+          <div class="ti-top">Fully offline</div><div class="ti-sub">Study anywhere</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div class="ti-top">No tracking</div><div class="ti-sub">Your data stays yours</div>
+        </div>
       </div>
     </div>
   </div>
@@ -261,13 +276,8 @@
   <div class="wrap">
     <h2>Ready when you are.</h2>
     <a class="badge" href="https://apps.apple.com/app/id6785233680" aria-label="Download Swedpass on the App Store">
-      <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-      <span>
-        <span class="b-small">Download on the</span><br>
-        <span class="b-big">App Store</span>
-      </span>
+      <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="160" height="53">
     </a>
-    <span class="badge-note">Free · iPhone · iOS 17+</span>
   </div>
 </section>
 
@@ -280,7 +290,7 @@
       <a href="mailto:info.swedpass@gmail.com">Contact</a>
     </div>
     <p class="disclaimer">
-      Swedpass is an unofficial study aid. It is not affiliated with, endorsed by, or connected to UHR or any Swedish government authority. Questions are for practice and are not guaranteed to match the official exam — always verify against UHR.
+      Swedpass is an unofficial study aid. It is not affiliated with, endorsed by, or connected to UHR or any Swedish government authority. Questions are for practice and are not guaranteed to match the official exam. Always verify against UHR.
     </p>
     <p>© 2026 Swedpass</p>
   </div>
